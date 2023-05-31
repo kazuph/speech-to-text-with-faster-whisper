@@ -1,0 +1,22 @@
+[project]
+name = "speech-to-text"
+version = "0.1.0"
+description = "Add a short description here"
+authors = [
+    { name = "Kazuhiro Homma", email = "kazu.homma@gmail.com" }
+]
+dependencies = ["faster-whisper~=0.6.0", "webrtcvad~=2.0.10", "pyaudio~=0.2.13", "setuptools~=67.8.0"]
+readme = "README.md"
+requires-python = ">= 3.8"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.rye.scripts]
+start = "python main.py"
